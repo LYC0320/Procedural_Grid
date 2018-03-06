@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\Cube.cs" />
      <Compile Include="Assets\Grid.cs" />
+     <Compile Include="Assets\RoundedCube.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
