@@ -48,6 +48,10 @@
      <Compile Include="Assets\Cube.cs" />
      <Compile Include="Assets\Grid.cs" />
      <Compile Include="Assets\RoundedCube.cs" />
+<<<<<<< HEAD
+=======
+     <None Include="Assets\NewSurfaceShader.shader" />
+>>>>>>> master
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
