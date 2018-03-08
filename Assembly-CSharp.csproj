@@ -45,7 +45,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CircleGizmo.cs" />
      <Compile Include="Assets\Cube.cs" />
+     <Compile Include="Assets\CubeSphere.cs" />
      <Compile Include="Assets\Grid.cs" />
      <Compile Include="Assets\RoundedCube.cs" />
      <None Include="Assets\NewSurfaceShader.shader" />
