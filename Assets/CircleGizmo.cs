@@ -27,7 +27,8 @@ public class CircleGizmo : MonoBehaviour {
     {
         Vector2 square = new Vector2(x, y);
 
-        Vector2 circle = square.normalized;
+        //Vector2 circle = square.normalized
+        Vector2 circle = new Vector2(square.x * Mathf.Sqrt(1 - square.y * square.y * 0.5f), square.y * Mathf.Sqrt(1 - square.x * square.x * 0.5f)); //the distance between adjacent points is more uniform than what we got with our first approach
         Vector2 origin = Vector2.zero;
 
         Gizmos.color = Color.black;
