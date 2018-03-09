@@ -117,11 +117,28 @@ public class CubeSphere : MonoBehaviour
         cubeUV[i] = new Color32((byte)x, (byte)y, (byte)z, 0);
         */
 
+        /* // First approch
         Vector3 v = new Vector3(x, y, z) * 2f / gridSize - Vector3.one;
         normals[i] = v.normalized;
         vertices[i] = normals[i] * radius;
         cubeUV[i] = new Color32((byte)x, (byte)y, (byte)z, 0);
+        */
 
+        Vector3 v = new Vector3(x, y, z) * 2f / gridSize - Vector3.one;
+
+        float x2 = v.x * v.x;
+        float y2 = v.y * v.y;
+        float z2 = v.z * v.z;
+
+        Vector3 s;
+
+        s.x = v.x * Mathf.Sqrt(1 - y2 * 0.5f - z2 * 0.5f + y2 * z2 / 3f);
+        s.y = v.y * Mathf.Sqrt(1 - x2 * 0.5f - z2 * 0.5f + x2 * z2 / 3f);
+        s.z = v.z * Mathf.Sqrt(1 - x2 * 0.5f - y2 * 0.5f + x2 * y2 / 3f);
+
+        normals[i] = s;
+        vertices[i] = normals[i] * radius;
+        cubeUV[i] = new Color32((byte)x, (byte)y, (byte)z, 0);
     }
 
     private void CreateTriangle()
